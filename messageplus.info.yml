@@ -1,0 +1,8 @@
+name: Message+
+description: Module that adds custom status text on article creation
+package: Custom
+
+type: module
+core: 8.x
+
+php: 5.6

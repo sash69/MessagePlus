@@ -1,0 +1,6 @@
+messageplus.admin:
+  title: 'Message+ settings'
+  description: 'Settings for Message+'
+  parent: system.admin_config
+  route_name: messageplus.settings
+  weight: 100

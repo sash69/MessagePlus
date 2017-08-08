@@ -1,0 +1,7 @@
+messageplus.settings:
+  path: '/admin/config/messageplus'
+  defaults:
+    _form: '\Drupal\messageplus\Form\messageplusSettingsForm'
+    _title: 'Message+ settings'
+  requirements:
+    _permission: 'administer site configuration'

@@ -1,0 +1,23 @@
+<?php
+/**
+ * Implements hook_entity_insert().
+ */
+//option 1
+function messageplus_node_insert($node)
+{
+    //option 1:
+    Drupal\messageplus\Controller\MessageplusController::add_custom_message('.');
+}
+
+//option 2
+function messageplus_form_alter(&$form, Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
+    if ($form_id == 'node_article_form')
+    {
+        $form['actions']['publish']['#submit'][] = 'messageplus_add_custom_message';
+        $form['actions']['unpublish']['#submit'][] = 'messageplus_add_custom_message';
+    }
+}
+
+function messageplus_add_custom_message(array $form, Drupal\Core\Form\FormStateInterface $form_state){
+    Drupal\messageplus\Controller\MessageplusController::add_custom_message('!');
+}
