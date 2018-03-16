@@ -1,6 +1,6 @@
 name: Message+
 description: Module that adds custom status text on article creation
-package: Customm
+package: Custommm
 
 type: module
 core: 8.x
