@@ -21,3 +21,5 @@ function messageplus_form_alter(&$form, Drupal\Core\Form\FormStateInterface $for
 function messageplus_add_custom_message(array $form, Drupal\Core\Form\FormStateInterface $form_state){
     Drupal\messageplus\Controller\MessageplusController::add_custom_message('!');
 }
+
+//something
